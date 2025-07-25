@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>  
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/team.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+        <li><a href="/services/#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+  <!-- Team Content -->
+  <div class="team-page">
+    <h1 class="team-title">تعرف على فريقنا</h1>
+
+    <div class="bubble-section">
+      <!-- Row 1 -->
+      <div class="bubble-row">
+        <div class="bubble">
+          <div class="bubble-title">أ.عبداللٰه عبد الرحمن مغربي<br><span class="en-title">General Manager</span></div>
+          <p class="bubble-paragraph">
+            المسؤول عن قيادة جميع عمليات الشركة وضمان الجودة في توفير العمالة المدربة لجميع عملائنا<br>
+            Responsible for leading all company operations and ensuring quality in providing trained labor to all our clients
+          </p>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-title">فريق الموارد البشرية<br><span class="en-title">Human Resources Team</span></div>
+          <p class="bubble-paragraph">
+            يحرص فريق الموارد البشرية لدينا على تحديد واختيار الموظفين ذوي الكفاءة العالية وتقديم برامج تدريب مستمرة لتعزيز مهاراتهم بما يتناسب مع معايير الصناعة الفندقية<br>
+            Our Human Resources team is dedicated to identifying and selecting highly qualified employees, while offering continuous training programs to enhance their skills in alignment with the standards of the hospitality industry
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="bubble-row">
+        <div class="bubble">
+          <div class="bubble-title">فريق التدريب والتطوير<br><span class="en-title">Training and Development Team</span></div>
+          <p class="bubble-paragraph">
+            يشرف على تدريب العمالة في جميع الأقسام الفندقية من خدمات الاستقبال إلى التنظيف وصيانة الغرف لضمان تقديم خدمة عالية الجودة<br>
+            The Training and Development Team oversees the training of staff across all hotel departments, from reception services to cleaning and room maintenance, ensuring the delivery of high-quality service
+          </p>
+        </div>
+
+        <div class="bubble">
+          <div class="bubble-title">فريق العمليات<br><span class="en-title">Operations Team</span></div>
+          <p class="bubble-paragraph">
+            يختص فريق العمليات بتنظيم وتوزيع المهام بين العمالة، والتأكد من سير العمل بشكل فعال ومنظم لتلبية احتياجات العملاء<br>
+            The Operations Team is responsible for organizing and distributing tasks among the staff, ensuring that work flows efficiently and in an organized manner to meet the clients' needs
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Summary Section -->
+  <section class="services-summary-section" id="services">
+    <div class="services-content">
+      <h2 class="services-title-ar">خدماتنا</h2>
+      <p class="services-paragraph-ar">
+        نقدم مجموعة واسعة من خدمات تأجير العمالة الفندقية التي تلبي احتياجاتك التشغيلية لضمان أعلى مستويات الأداء في قطاع الضيافة.
+      </p>
+
+      <h2 class="services-title-en">Our Services</h2>
+      <p class="services-paragraph-en">
+        We offer a wide range of hotel staffing services that meet your operational needs, ensuring the highest levels of performance in the hospitality sector.
+      </p>
+
+      <div class="services-button-container">
+        <!-- ✅ Updated Link Here -->
+        <a href="/services/" class="explore-services-button">استكشف خدماتنا | Explore Our Services</a>
+      </div>
+    </div>
+  </section>
+
+ <!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+</body>
+</html>

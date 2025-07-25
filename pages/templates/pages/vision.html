@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/vision.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+        <li><a href="/services/#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+
+
+<!-- Vision Section -->
+<section class="section" id="vision">
+  <div class="container">
+    <h2 class="title"><i class="fas fa-eye"></i> رؤيتنا | Our Vision</h2>
+    <p class="paragraph">
+      نحن في سواعد الضيافة نسعى لأن نكون الرائدين في تقديم حلول توريد العمالة في جميع المجالات، من خلال توفير أفضل العمالة المدربة والمؤهلة التي تلبي احتياجات عملائنا في مختلف الصناعات. نحن ملتزمون بتوفير العمالة المتخصصة التي تدعم تطور الأعمال وتساهم في تحقيق النجاح المستدام لعملائنا.
+    </p>
+    <p class="paragraph ltr">
+      At Hospitality Hands, we strive to be leaders in providing staffing solutions across various sectors by offering the best trained and qualified labor that meets the needs of our clients in diverse industries. We are committed to supplying specialized labor that supports business growth and contributes to the sustainable success of our clients.
+    </p>
+    <div class="image-box">
+      <img src="{% static 'pages/images/hosp.webp' %}" alt="Vision Image">
+    </div>
+  </div>
+</section>
+
+<!-- Message Section -->
+<section class="section alt" id="message">
+  <div class="container">
+    <h2 class="title"><i class="fas fa-envelope-open-text"></i> رسالتنا | Our Message</h2>
+    <p class="paragraph">
+      نهدف إلى تقديم خدمات توريد العمالة بجودة عالية واحترافية من خلال فهمنا العميق لاحتياجات كل قطاع سواء كان في القطاع الفندقي، الصناعي، الإنشائي، التكنولوجي، التجاري، أو أي قطاع آخر. نعمل على تسهيل عملية توظيف العمالة المناسبة وتقديمها في الوقت المناسب، مع ضمان الالتزام بأعلى معايير الأداء والسلامة.
+    </p>
+    <p class="paragraph ltr">
+      We aim to provide high-quality, professional staffing solutions through our deep understanding of the unique needs of each sector, whether in hospitality, industrial, construction, technology, commercial, or any other field. We focus on facilitating the process of recruiting the right labor and delivering it at the right time, ensuring adherence to the highest standards of performance and safety.
+    </p>
+    <div class="image-box">
+      <img src="{% static 'pages/images/rec.jpg' %}" alt="Message Image">
+    </div>
+  </div>
+</section>
+
+<!-- What Are We Doing Section -->
+<section class="section" id="what-we-do">
+  <div class="container">
+    <h2 class="title"><i class="fas fa-cogs"></i> ماذا نفعل؟ | ?What Are We Doing</h2>
+
+    <p class="paragraph">
+      نحن نقدم العمالة الفندقية المدربة في جميع الأقسام التي تساهم في نجاح الفندق، مع التركيز على الجودة والاحترافية في تقديم الخدمات.
+    </p>
+    <p class="paragraph ltr">
+      We provide trained hotel staff across all departments that contribute to the success of the hotel, with a strong focus on quality and professionalism in service delivery.
+    </p>
+
+    <div class="why-us-scroll-container">
+      <!-- Card 1 -->
+      <div class="why-card">
+        <i class="fas fa-users-cog icon"></i>
+        <h3>توريد عمالة متخصصة<br><span>Supplying Specialized Labor</span></h3>
+        <p class="ar">توريد عمالة مدربة في جميع الأقسام الفندقية حسب احتياج العملاء.</p>
+        <p class="en">Trained labor across hotel departments tailored to client needs.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="why-card">
+        <i class="fas fa-chalkboard-teacher icon"></i>
+        <h3>تدريب الموظفين<br><span>Employee Training</span></h3>
+        <p class="ar">نقدم برامج تدريبية حديثة لموظفينا وفق معايير قطاع الضيافة.</p>
+        <p class="en">Training programs to equip staff with top hospitality skills.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="why-card">
+        <i class="fas fa-calendar-alt icon"></i>
+        <h3>حلول موسمية مرنة<br><span>Seasonal Labor Solutions</span></h3>
+        <p class="ar">نقدم حلولاً موسمية للفعاليات الكبرى مثل موسم الحج.</p>
+        <p class="en">Flexible labor solutions for peak periods and special events.</p>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+</body>
+</html>

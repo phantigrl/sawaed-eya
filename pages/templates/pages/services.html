@@ -1,0 +1,328 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+        <li><a href="#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+
+
+  <!-- Page‑specific motion (Projects cards & Tooltip) -->
+  <style>
+    .project-cards-container {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin-top: 40px;
+    }
+
+    .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      position: relative;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      color: #3c7e67;
+      margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #1f3c2b;
+    }
+
+    .project-card p {
+      color: #444;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin: 4px 0;
+    }
+
+    .project-card p.en {
+      color: #666;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    .badge, .bad {
+      display: inline-block;
+      background: #3c7e67;
+      color: #fff;
+      padding: 5px 12px;
+      font-size: 0.8rem;
+      border-radius: 12px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+
+    .tooltip-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .tooltip-content {
+      display: none;
+      position: absolute;
+      bottom: 120%;
+      left: 0;
+      background-color: #fff;
+      color: #222;
+      padding: 10px 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      width: 220px;
+      z-index: 999;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    .tooltip-container:hover .tooltip-content {
+      display: block;
+    }
+
+    /* Project image */
+    .projects-image {
+      width: 100%;
+      max-width: 900px;
+      margin: 70px auto 0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
+    }
+
+    .projects-image img {
+      width: 100%;
+      height: auto;
+      transition: transform 6s ease;
+    }
+
+    .projects-image:hover img {
+      transform: scale(1.05) rotate(0.2deg);
+    }
+
+    /* Scroll reveal */
+    @media (prefers-reduced-motion: no-preference) {
+      .project-card.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+<!-- ░░░ Services ░░░ -->
+<section class="services-section">
+  <h2 class="services-title">خدماتنا | Our Services</h2>
+  <div class="services-grid">
+    <div class="service-box"><i class="fas fa-tools service-icon"></i>
+      <h3>صيانة | Maintenance</h3>
+      <p>فنيين مختصين في صيانة المرافق الفندقية.</p>
+      <p>Technicians maintaining hotel equipment & facilities smoothly.</p>
+    </div>
+    <div class="service-box"><i class="fas fa-concierge-bell service-icon"></i>
+      <h3>استقبال | Reception</h3>
+      <p>موظفون مدربون على الاستقبال لخدمة الضيوف.</p>
+      <p>Receptionists providing a welcoming guest experience.</p>
+    </div>
+    <div class="service-box"><i class="fas fa-bed service-icon"></i>
+      <h3>خدمة الغرف | Room Service</h3>
+      <p>تنظيف وترتيب يومي لراحة الضيوف.</p>
+      <p>Daily room cleaning & organisation for comfort.</p>
+    </div>
+    <div class="service-box"><i class="fas fa-users service-icon"></i>
+      <h3>عمالة موسمية | Seasonal Labor</h3>
+      <p>عمالة مؤقتة للمواسم مثل موسم الحج.</p>
+      <p>Skilled temporary labour for peak seasons.</p>
+    </div>
+    <div class="service-box"><i class="fas fa-utensils service-icon"></i>
+      <h3>الطعام والشراب | Food & Beverage</h3>
+      <p>طهاة وندلة محترفون لخدمة الضيوف.</p>
+      <p>Chefs & waiters offering exceptional service.</p>
+    </div>
+    <div class="service-box"><i class="fas fa-user-tie service-icon"></i>
+      <h3>تأجير عمالة | Staffing</h3>
+      <p>تأمين عمالة فندقية متخصصة ومدربة.</p>
+      <p>Providing trained hospitality staff tailored to needs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░░ Projects ░░░ -->
+<section id="projects-section" class="projects-section">
+
+  <h2 class="projects-title">مشاريعنا | Our Projects</h2>
+  <p class="projects-intro">
+    لقد نفذنا بنجاح مشاريع كبرى في قطاع الضيافة، مع تركيز خاص على موسم الحج والمنشآت الحكومية.
+    <br>
+    We deliver high‑impact hospitality staffing projects for iconic venues and peak seasons.
+  </p>
+
+  <div class="project-cards-container">
+    <!-- Card 1 -->
+    <div class="project-card">
+      <div class="card-icon"><i class="fas fa-kaaba"></i></div>
+      <h3>شركة مشارق – وزارة الحج</h3>
+      <p>توفير عمالة إضافية للفنادق بمكة والمدينة خلال مواسم الحج.</p>
+      <p class="en">Mashariq Co. – Ministry of Hajj (extra hotel staffing for Hajj season in Mecca & Medina).</p>
+      <div class="tooltip-container">
+        <span class="bad">📍 Offices</span>
+        <div class="tooltip-content">
+          1435: Office 54<br>
+          1436: Office 54<br>
+          1437–1439: Office 94<br>
+          1443: Office 94<br>
+          1444–1445: Office 501
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="project-card">
+      <div class="card-icon"><i class="fas fa-hotel"></i></div>
+      <h3>مشروع توريد العمالة الفندقية</h3>
+      <p>توفير 50 موظفًا للعمل في أقسام متعددة داخل الفنادق.</p>
+      <p class="en">Supplying 50 skilled staff for hotel operations – reception, room service, etc.</p>
+      <span class="badge">جودة عالية</span>
+    </div>
+  </div>
+
+  <div class="projects-image">
+    <img src="{% static 'pages/images/hotel.jpeg' %}" alt="Hospitality projects showcase" />
+  </div>
+</section>
+
+ <!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+
+<!-- ░░░ Scroll reveal ░░░ -->
+<script>
+  const cards = document.querySelectorAll('.project-card');
+  const revealObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  cards.forEach(card => revealObserver.observe(card));
+</script>
+
+</body>
+</html>

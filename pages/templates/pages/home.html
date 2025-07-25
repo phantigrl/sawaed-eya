@@ -1,0 +1,248 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'pages/job_seekers.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+<!-- Page‑specific styles -->
+  <link rel="stylesheet" href="{% static 'pages/job_seekers.css' %}" />
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+ <!-- ░░░ Navigation ░░░ -->
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+        <li><a href="/services/#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="landing-layout">
+    <div class="image-side"></div>
+    <div class="info-side">
+      <img src="{% static 'pages/images/qr.png' %}" alt="Sawaed Logo" class="qr-code">
+      <div class="text-wrapper">
+        <h1 class="main-title-arabic">مرحباً بكم في سواعد</h1>
+        <p class="subtitle">Empowering Saudi Hospitality with Excellence</p>
+        <div class="contact-block">
+          <p><strong>Phone:</strong> +966 504 504 283</p>
+          <p><strong>Website:</strong> <a href="http://www.sawaeid-sa.com">www.sawaeid-sa.com</a></p>
+          <p><strong>Location:</strong> Makkah, 24232, Saudi Arabia</p>
+          <p><strong>Email:</strong> <a href="mailto:sawaeidhospitality@gmail.com">sawaeidhospitality@gmail.com</a></p>
+        </div>
+        <div class="button-group">
+          <a href="#intro" class="nav-button">متابعة</a>
+          <a href="/contact/" class="nav-button">اتصل بنا</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section id="intro" class="intro-section">
+    <div class="intro-text">
+      <h2 class="intro-title-ar">مقدمة</h2>
+      <p class="paragraph-ar">
+        سواعد الضيافة شركة رائدة في مجال توريد العمالة المدربة في قطاع الخدمات الفندقية.<br>
+        متخصصون في تقديم عمالة عالية الجودة ومؤهلة لجميع الأقسام الفندقية، سواء كانت لفنادق صغيرة أو منشآت فاخرة.<br>
+        نقدم حلولاً مرنة للعمالة لتلبية احتياجات العملاء مع ضمان تقديم تجربة استثنائية للضيوف.
+      </p>
+      <p class="board-ar">
+        مجلس الإدارة<br>
+        رئيس مجلس الإدارة<br>
+        <a href="#ahmed" class="linked-name">أ. أحمد منصور عبد الرحمن دمنهوري</a>
+      </p>
+      <h2 class="intro-title-en">Introduction</h2>
+      <p class="paragraph-en">
+        <strong>SAWAEID</strong> is a leading company specializing in providing skilled labor in the hospitality sector.
+      </p>
+      <p class="paragraph-en">
+        We are experts in supplying high-quality and well-trained staff for all hotel departments, whether for small hotels or luxurious establishments.
+      </p>
+      <p class="paragraph-en">
+        We offer flexible staffing solutions tailored to meet our clients' needs while ensuring an exceptional guest experience.
+      </p>
+      <p class="board-en">
+        <strong>Board of Directors</strong><br>
+        <strong>Chairman of the Board</strong><br>
+        <a href="#ahmed" class="linked-name">Mr. Ahmed Mansour Abdulrahman Damanhouri</a>
+      </p>
+    </div>
+    <div class="intro-image">
+      <img src="{% static 'pages/images/14.avif' %}" alt="Hospitality staff">
+    </div>
+  </section>
+
+  <!-- Ahmed Section -->
+  <section id="ahmed" class="ahmed-page">
+    <div class="info-card">
+      <img src="{% static 'pages/images/ahmed.png' %}" alt="Ahmed Damanhouri">
+      <div class="info-text">
+        <div class="name-ar">١. أحمد منصور عبد الرحمن دمنهوري</div>
+        <div class="role-ar">رئيس مجلس الإدارة</div>
+      </div>
+    </div>
+    <div class="quotes-section">
+      <h2>Chairman of the Board</h2>
+      <p>
+        "الإدارة ليست مجرد اتخاذ قرارات، بل هي فن تحفيز فريق العمل ليصل إلى أقصى إمكاناته.
+        القائد الناجح هو الذي يحوّل التحديات إلى فرص، ويجعل من التنوع مصدرًا للقوة، ومن الإنجازات حكايات ملهمة تُروى عبر الزمن"
+      </p>
+      <p>
+        "Management is not merely about making decisions; it is the art of inspiring a team to reach its full potential.
+        A successful leader transforms challenges into opportunities, diversity into a source of strength, and achievements into inspiring stories that endure through time."
+      </p>
+      <div class="team-button-container">
+        <a href="/team/" class="team-button">تعرف على فريقنا</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ WHY US ░░░ -->
+<section id="why-us" class="why-us-section">
+  <h2 class="why-us-title">لماذا نحن؟ | Why Us</h2>
+  <div class="why-us-scroll-container">
+
+    <!-- Trained & Qualified Labour -->
+    <div class="why-card">
+      <i class="fas fa-user-graduate icon"></i>
+      <h3>عمالة مدربة ومؤهلة<br><span>Trained & Qualified Labour</span></h3>
+      <p class="ar">نضمن أن جميع العمالة التي نوفرها تتمتع بكفاءة عالية وخبرة واسعة في مجال الخدمات الفندقية.</p>
+      <p class="en">We ensure every staff member we supply is highly skilled and deeply experienced in hospitality services.</p>
+    </div>
+
+    <!-- Flexible Solutions -->
+    <div class="why-card">
+      <i class="fas fa-sliders-h icon"></i>
+      <h3>حلول مرنة<br><span>Flexible Solutions</span></h3>
+      <p class="ar">تقدم حلولا مرنة لاحتياجاتك التشغيلية، سواء كانت لعقود طويلة أو قصيرة الأمد، وتلبي متطلبات فندقك أو منتجعك.</p>
+      <p class="en">We offer flexible solutions for your operational needs, whether for long-term or short-term contracts, meeting your hotel or resort requirements.</p>
+    </div>
+
+    <!-- High-Quality Service -->
+    <div class="why-card">
+      <i class="fas fa-award icon"></i>
+      <h3>خدمة عالية الجودة<br><span>High-Quality Service</span></h3>
+      <p class="ar">نحرص على أن تكون خدماتنا في أعلى مستوى من الجودة لضمان رضا ضيوفك وتلبية توقعاتهم.</p>
+      <p class="en">We are committed to ensuring that our services are of the highest quality to guarantee your guests' satisfaction and meet their expectations.</p>
+    </div>
+
+    <!-- Continuous Training -->
+    <div class="why-card">
+      <i class="fas fa-chalkboard-teacher icon"></i>
+      <h3>تدريب مستمر<br><span>Continuous Training</span></h3>
+      <p class="ar">نقدم تدريباً مستمراً لعمالتنا على أحدث التقنيات وأفضل أساليب التعامل مع الضيوف لضمان تقديم خدمة استثنائية.</p>
+      <p class="en">We provide continuous training for our staff on the latest technologies and best guest handling practices to ensure excellent service.</p>
+    </div>
+
+    <!-- Extensive Experience -->
+    <div class="why-card">
+      <i class="fas fa-briefcase icon"></i>
+      <h3>خبرة واسعة<br><span>Extensive Experience</span></h3>
+      <p class="ar">لدينا سنوات من الخبرة في قطاع الخدمات الفندقية، ما يجعلنا الخيار المثالي لتوفير العمالة المدربة وفقا لأعلى المعايير.</p>
+      <p class="en">We have years of experience in the hospitality services sector, making us the ideal choice for providing trained labor to the highest standards.</p>
+    </div>
+
+  </div>
+</section>
+
+ <!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+</body>
+</html>

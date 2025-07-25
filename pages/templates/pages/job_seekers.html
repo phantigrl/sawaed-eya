@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>للباحثين عن عمل | Job Seekers</title>
+
+  <!-- Global styles you already have -->
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/job_seekers.css' %}" />
+
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+
+  <!-- Page‑specific styles -->
+  <link rel="stylesheet" href="{% static 'pages/job_seekers.css' %}" />
+
+  <!-- Fonts & icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+ <!-- ░░░ Navigation ░░░ -->
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+        <li><a href="/services/#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="#projects-section"><span class="ar-label">مشاريعنا</span> | <span class="en-label">Our Projects</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+
+  <!-- ░░░ NAVIGATION ░░░ -->
+
+  <!-- ░░░ INTRO ░░░ -->
+  <section class="jobseekers-intro">
+    <h2>انضم إلينا <span>|</span> Join Our Workforce</h2>
+    <p class="lead">
+      نحن نبحث عن أفراد موهوبين للعمل في مجال الفندقة والسياحة.<br>
+      If you’re passionate about hospitality and ready to grow, apply below!
+    </p>
+  </section>
+
+  <!-- ░░░ RECRUITMENT STEPS ░░░ -->
+  <section class="recruitment-steps">
+    <h3>خطوات التوظيف <span>|</span> Recruitment Steps</h3>
+    <div class="steps-grid">
+      <div class="step">
+        <i class="fas fa-file-alt"></i>
+        <p>تقديم الطلب<br><span>Submit Application</span></p>
+      </div>
+      <div class="step">
+        <i class="fas fa-phone"></i>
+        <p>مقابلة أولية<br><span>Initial Interview</span></p>
+      </div>
+      <div class="step">
+        <i class="fas fa-user-check"></i>
+        <p>القبول والتدريب<br><span>Acceptance & Training</span></p>
+      </div>
+      <div class="step">
+        <i class="fas fa-briefcase"></i>
+        <p>البدء في العمل<br><span>Start Working</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ APPLICATION FORM ░░░ -->
+  <section class="application-form">
+    <h3>قدّم الآن <span>|</span> Apply Now</h3>
+
+    <form id="jobForm" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="field">
+        <label>الاسم الكامل | Full Name<span>*</span></label>
+        <input type="text" name="name" required />
+      </div>
+
+      <div class="field">
+        <label>البريد الإلكتروني | Email<span>*</span></label>
+        <input type="email" name="email" required />
+      </div>
+
+      <div class="field">
+        <label>رقم الهاتف | Phone<span>*</span></label>
+        <input type="tel" name="phone" pattern="^[0-9+\-\s]{6,15}$" required />
+      </div>
+
+      <div class="field">
+        <label>الوظيفة المطلوبة | Desired Position<span>*</span></label>
+        <input type="text" name="position" required />
+      </div>
+
+      <div class="field">
+        <label>السيرة الذاتية (PDF/DOC, ≤2 MB)<span>*</span></label>
+        <input type="file" name="cv" accept=".pdf,.doc,.docx" required />
+      </div>
+
+      <div class="field">
+        <label>رسالة إضافية | Message</label>
+        <textarea name="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">إرسال الطلب | Submit Application</button>
+    </form>
+    <p id="formMsg" class="form-msg"></p>
+  </section>
+
+<!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+
+  <!-- Page‑specific JS -->
+  <script src="{% static 'pages/job_seekers.js' %}"></script>
+</body>
+</html>

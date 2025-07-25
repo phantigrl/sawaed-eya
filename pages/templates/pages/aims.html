@@ -1,0 +1,198 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>سواعد | Sawaeid</title>
+  <link rel="stylesheet" href="{% static 'pages/nav.css' %}"/>
+  <link rel="stylesheet" href="{% static 'pages/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'pages/services.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+
+ <!-- ░░░ Navigation ░░░ -->
+<!-- ░░░ Navigation ░░░ -->
+<nav class="top-nav">
+  <div class="nav-logo">
+    <img src="{% static 'pages/images/logo.png' %}" alt="Logo" />
+  </div>
+  <ul class="nav-menu">
+    <!-- Home Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">الرئيسية</span> | <span class="en-label">Home</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/#intro"><span class="ar-label">المقدمة</span> | <span class="en-label">Introduction</span></a></li>
+        <li><a href="/#ahmed"><span class="ar-label">أ. أحمد</span> | <span class="en-label">Ahmed</span></a></li>
+      </ul>
+    </li>
+
+    <!-- About Us Dropdown -->
+    <li class="dropdown">
+      <a href="#"><span class="ar-label">من نحن</span> | <span class="en-label">About Us</span></a>
+      <ul class="dropdown-menu">
+        <li><a href="/team/"><span class="ar-label">فريقنا</span> | <span class="en-label">Our Team</span></a></li>
+        <li><a href="/services/"><span class="ar-label">خدماتنا</span> | <span class="en-label">Our Services</span></a></li>
+
+      </ul>
+    </li>
+
+    <!-- Other Links -->
+    <li><a href="/#why-us"><span class="ar-label">لماذا نحن؟</span> | <span class="en-label">Why Us?</span></a></li>
+    <li><a href="/vision/#what-we-do"><span class="ar-label">ماذا نفعل؟</span> | <span class="en-label">What Are We Doing</span></a></li>
+    <li><a href="/vision/"><span class="ar-label">رؤيتنا</span> | <span class="en-label">Our Vision</span></a></li>
+    <li><a href="/aims/"><span class="ar-label"> أهدافنا</span> | <span class="en-label">Our Goals</span></a></li>
+    <li><a href="/contact/"><span class="ar-label">اتصل بنا</span> | <span class="en-label">Contact Us</span></a></li>
+
+  </ul>
+</nav>
+
+
+  <!-- Aims Section -->
+  <section class="intro-section">
+    <h2 class="intro-title-ar">أهدافنا</h2>
+    <h2 class="intro-title-en">Our Aims</h2>
+    <div class="why-us-scroll-container">
+
+      <!-- Aim 1 -->
+      <div class="why-card">
+        <i class="fas fa-people-carry icon"></i>
+        <h3>توفير عمالة متخصصة<br><span>Specialized Skilled Labor</span></h3>
+        <p class="ar">توفير عمالة فندقية مؤهلة ومدربة بشكل احترافي لتلبية احتياجات الفنادق والمنشآت السياحية.</p>
+        <p class="en">We ensure all the labor we provide is highly skilled and professionally trained for hospitality needs.</p>
+      </div>
+
+      <!-- Aim 2 -->
+      <div class="why-card">
+        <i class="fas fa-star icon"></i>
+        <h3>التميز في تقديم الخدمة<br><span>Excellence in Service</span></h3>
+        <p class="ar">تقديم خدمات ذات جودة عالية وتجربة عملاء مميزة للفنادق والمنتجعات.</p>
+        <p class="en">High-quality services and the best client experience for hotels and resorts.</p>
+      </div>
+
+      <!-- Aim 3 -->
+      <div class="why-card">
+        <i class="fas fa-shield-alt icon"></i>
+        <h3>معايير السلامة والصحة<br><span>Health & Safety Standards</span></h3>
+        <p class="ar">ضمان تطبيق معايير السلامة من خلال تدريب مستمر ومراقبة الأداء.</p>
+        <p class="en">Continuous training and monitoring to ensure highest safety and health standards.</p>
+      </div>
+
+      <!-- Aim 4 -->
+      <div class="why-card">
+        <i class="fas fa-handshake icon"></i>
+        <h3>تسهيل التوظيف<br><span>Streamlined Hiring</span></h3>
+        <p class="ar">تبسيط إجراءات التوظيف والتعاقد مع العمالة لتلبية احتياجات الفنادق.</p>
+        <p class="en">Streamlined recruitment and flexible hiring solutions for hotels.</p>
+      </div>
+
+      <!-- Aim 5 -->
+      <div class="why-card">
+        <i class="fas fa-seedling icon"></i>
+        <h3>الاستدامة والتطوير<br><span>Sustainability & Development</span></h3>
+        <p class="ar">توفير فرص تدريب وتطوير مستمر لتحسين أداء العمالة.</p>
+        <p class="en">Ongoing training to elevate labor performance and service quality.</p>
+      </div>
+
+      <!-- Aim 6 -->
+      <div class="why-card">
+        <i class="fas fa-tasks icon"></i>
+        <h3>إدارة فعالة للعمالة<br><span>Effective Labor Management</span></h3>
+        <p class="ar">تنظيم توزيع العمالة حسب احتياجات الفنادق وتوفيرها في الوقت المناسب.</p>
+        <p class="en">Coordinated staff allocation based on hotel needs and timing.</p>
+      </div>
+
+      <!-- Aim 7 -->
+      <div class="why-card">
+        <i class="fas fa-gavel icon"></i>
+        <h3>الامتثال للقوانين<br><span>Legal Compliance</span></h3>
+        <p class="ar">الالتزام الكامل بالقوانين المحلية والدولية في تنظيم العمالة.</p>
+        <p class="en">Full compliance with local and international labor and residency laws.</p>
+      </div>
+
+      <!-- Aim 8 -->
+      <div class="why-card">
+        <i class="fas fa-lightbulb icon"></i>
+        <h3>حلول مبتكرة<br><span>Innovative Solutions</span></h3>
+        <p class="ar">ابتكار حلول مرنة وفعالة للفنادق خلال المواسم أو المناسبات الخاصة.</p>
+        <p class="en">Flexible and cost-effective staffing for seasonal or special events.</p>
+      </div>
+
+      <!-- Aim 9 -->
+      <div class="why-card">
+        <i class="fas fa-thumbs-up icon"></i>
+        <h3>تعزيز السمعة<br><span>Enhancing Reputation</span></h3>
+        <p class="ar">بناء سمعة قوية من خلال تقديم خدمات موثوقة وعالية الجودة.</p>
+        <p class="en">Build trust with high-quality, reliable services.</p>
+      </div>
+
+      <!-- Aim 10 -->
+      <div class="why-card">
+        <i class="fas fa-bullseye icon"></i>
+        <h3>تحقيق أهداف العميل<br><span>Client Goal Achievement</span></h3>
+        <p class="ar">دعم الفنادق في تحقيق أهدافها التشغيلية والفنية من خلال خدماتنا.</p>
+        <p class="en">Helping hotels meet operational and strategic goals efficiently.</p>
+      </div>
+
+    </div>
+  </section>
+
+ <!-- ░░░ FOOTER ░░░ -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- INTRO PAGE -->
+    <div class="footer-column">
+      <h3>الرئيسية  | Home </h3>
+      <ul>
+        <li><a href="/#intro">المقدمة | Introduction</a></li>
+        <li><a href="/#ahmed">أ. أحمد دمنهوري | Ahmed Damanhouri</a></li>
+        <li><a href="/#why-us">لماذا نحن؟ | Why Us?</a></li>
+      </ul>
+    </div> 
+
+      <!-- ABOUT US PAGE (combined Team + Services) -->
+    <div class="footer-column">
+      <h3>من نحن | About Us</h3>
+      <ul>
+        <li><a href="/team/">فريقنا | Our Team</a></li>
+        <li><a href="/services/">خدماتنا | Our Services</a></li>
+        <li><a href="/services/#projects-section">مشاريعنا | Our Projects</a></li>
+
+      </ul>
+    </div>
+
+  
+    <!-- WHAT-WE-DO PAGE -->
+    <div class="footer-column">
+      <h3>ماذا نفعل؟ | What Are We Doing</h3>
+      <ul>
+        <li><a href="/vision/">رؤيتنا | Our Vision</a></li>
+        <li><a href="/vision/#message">رسالتنا | Our Message</a></li>
+        <li><a href="/vision/#what-we-do">ماذا نفعل؟ | What Are We Doing</a></li>
+      </ul>
+    </div>
+
+
+
+    <!-- PROJECTS PAGE -->
+    <div class="footer-column">
+      <h3>مشاريعنا | Our Projects</h3>
+      <ul>
+        <li><a href="/services/#projects-section">المشاريع | Projects</a></li>
+        <li><a href="/case/">دراسة الحالة | Project Case Study</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 سواعد. جميع الحقوق محفوظة.
+  </div>
+</footer>
+
+
+</body>
+</html>

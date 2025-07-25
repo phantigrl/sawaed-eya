@@ -1,0 +1,152 @@
+
+
+/* SECTION STYLE */
+.section {
+  padding: 60px 20px;
+  background-color: #f1e8dc;
+}
+
+.section.alt {
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: right;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #3c7e67;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.title i {
+  margin-left: 10px;
+  color: #1f3c2b;
+}
+
+.paragraph {
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+  color: #333;
+  direction: rtl;
+}
+
+.paragraph.ltr {
+  direction: ltr;
+  text-align: left;
+}
+
+/* IMAGE */
+.image-box {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* FOOTER */
+.footer-column h3 {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 6px;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ddd;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #f1e8dc;
+}
+
+.footer {
+  background-color: #1f3c2b;
+  color: #fff;
+  padding: 40px 20px 20px 20px;
+  margin-top: 40px;
+  font-size: 0.95rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 30px; /* smaller gap between columns */
+  max-width: 1200px;
+  margin: 0 auto 10px auto;
+}
+
+.footer-column {
+  flex: 1 1 250px;
+  min-width: 200px;
+}
+
+.footer-column ul li {
+  margin-bottom: 6px; /* tighter spacing */
+  line-height: 1.4;
+}
+
+.footer-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #4caf50;
+  padding-bottom: 8px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #1f3c2b;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #888;
+  padding: 10px 0 0 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+}
